@@ -10,10 +10,14 @@
 </head>
 <body>
 
-	<form action="${linkServletNovaEmpresa}" method="post">
+	<form action="${linkServletNovaEmpresa }" method="post">
 
-		Nome: <input type="text" name="nome" value="${empresa.nome}" /> Data
+		Nome: <input type="text" name="nome" value="${empresa.nome }" /> Data
 		Abertura: <input type="text" name="data"
-			value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>" />
+			value="<fmt:formatDate value="${empresa.dataAbertura }" pattern="dd/MM/yyyy"/>" />
+		<input type="hidden" name="id" value="${empresa.id }"> <input
+			type="submit" />
+	</form>
+
 </body>
 </html>
