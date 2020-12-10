@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@SuppressWarnings("serial")
-@WebServlet(urlPatterns="/oi")
+//@SuppressWarnings("serial")
+//@WebServlet(urlPatterns="/oi")
 public class OiMundoServlet extends HttpServlet {
 
     @Override
