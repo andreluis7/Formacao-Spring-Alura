@@ -14,7 +14,8 @@ import br.com.caelum.gerenciador.modelo.Empresa;
 
 public class NovaEmpresa {
 
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		System.out.println("Cadastrando nova empresa");
 
@@ -38,7 +39,6 @@ public class NovaEmpresa {
 
 		request.setAttribute("empresa", empresa.getNome());
 
-		response.sendRedirect("entrada?acao=ListaEmpresas");
-
+		return "redirect:entrada?acao=ListaEmpresas";
 	}
 }
