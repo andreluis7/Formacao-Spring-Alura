@@ -16,7 +16,7 @@ import br.com.caelum.gerenciador.modelo.Empresa;
 /**
  * Servlet implementation class ListaEmpresasSerlvet
  */
-@WebServlet("/listaEmpresas")
+//@WebServlet("/listaEmpresas")
 public class ListaEmpresasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
