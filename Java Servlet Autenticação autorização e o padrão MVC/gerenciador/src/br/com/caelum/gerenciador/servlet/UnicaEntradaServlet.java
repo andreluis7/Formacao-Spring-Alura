@@ -13,6 +13,7 @@ import br.com.caelum.gerenciador.acao.AlteraEmpresa;
 import br.com.caelum.gerenciador.acao.ListaEmpresas;
 import br.com.caelum.gerenciador.acao.MostraEmpresa;
 import br.com.caelum.gerenciador.acao.NovaEmpresa;
+import br.com.caelum.gerenciador.acao.NovaEmpresaForm;
 import br.com.caelum.gerenciador.acao.RemoveEmpresa;
 
 @WebServlet("/entrada")
@@ -50,11 +51,15 @@ public class UnicaEntradaServlet extends HttpServlet {
 			NovaEmpresa acao = new NovaEmpresa();
 			nome = acao.executa(request, response);
 
-		}
+		} else if (paramAcao.equals("NovaEmpresaForm")) {
+
+		    NovaEmpresaForm acao = new NovaEmpresaForm();
+		    nome = acao.executa(request, response);
+		} 
 
 		String[] tipoEEndereco = nome.split(":");
 		if (tipoEEndereco[0].equals("forward")) {
-			RequestDispatcher rd = request.getRequestDispatcher(tipoEEndereco[1]);
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/" + tipoEEndereco[1]);
 			rd.forward(request, response);
 		} else {
 			response.sendRedirect(tipoEEndereco[1]);
