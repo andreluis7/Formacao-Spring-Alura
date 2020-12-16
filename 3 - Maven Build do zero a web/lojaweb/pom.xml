@@ -35,6 +35,9 @@
 				<version>9.3.7.v20160115</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/loja</contextPath>
+					</webApp>
 				</configuration>
 			</plugin>
 		</plugins>
